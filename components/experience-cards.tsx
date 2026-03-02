@@ -5,10 +5,12 @@ import { useInView } from "@/hooks/use-in-view";
 
 function ExperienceCard({
   id,
+  intro,
   children,
 }: {
   id: string;
-  children: React.ReactNode;
+  intro: React.ReactNode;
+  children?: React.ReactNode;
 }) {
   const { ref, inView } = useInView({
     rootMargin: "-10% 0px -10% 0px",
@@ -16,15 +18,17 @@ function ExperienceCard({
   });
 
   return (
-    <article
-      ref={ref as React.RefObject<HTMLElement>}
-      id={id}
-      className={cn(
-        "pl-6 border-l-2 mb-12 last:mb-0 scroll-mt-8 transition-colors duration-300",
-        inView ? "border-foreground" : "border-border"
-      )}
-    >
-      {children}
+    <article id={id} className="mb-12 last:mb-0 scroll-mt-8">
+      <div
+        ref={ref as React.RefObject<HTMLDivElement>}
+        className={cn(
+          "pl-6 border-l-2 pb-1 transition-colors duration-300",
+          inView ? "border-foreground" : "border-border"
+        )}
+      >
+        {intro}
+      </div>
+      {children && <div className="mt-4 pl-7">{children}</div>}
     </article>
   );
 }
@@ -33,17 +37,23 @@ export function ExperienceCards() {
   return (
     <>
       {/* Leviathan UX */}
-      <ExperienceCard id="leviathan-ux">
-        <h3 className="text-base font-semibold text-foreground mb-1">
-          Leviathan UX
-        </h3>
-        <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-          Senior Product Designer (Director)
-        </p>
-        <p className="text-[13px] text-muted-foreground mb-4">
-          <time dateTime="2022-05">May 2022</time> – Present &middot; Remote,
-          United Kingdom
-        </p>
+      <ExperienceCard
+        id="leviathan-ux"
+        intro={
+          <>
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Leviathan UX
+            </h3>
+            <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
+              Senior Product Designer (Director)
+            </p>
+            <p className="text-[13px] text-muted-foreground">
+              <time dateTime="2022-05">May 2022</time> – Present &middot; Remote,
+              United Kingdom
+            </p>
+          </>
+        }
+      >
         <p className="text-[15px] leading-[1.65] mb-4">
           Lead designer across a portfolio of high-trust fintech and healthtech
           products, including Volt.io, Evolve, IFX, Habitual, and Healthpath.
@@ -96,18 +106,24 @@ export function ExperienceCards() {
       </ExperienceCard>
 
       {/* Automation Squared */}
-      <ExperienceCard id="automation-squared">
-        <h3 className="text-base font-semibold text-foreground mb-1">
-          Automation Squared
-        </h3>
-        <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-          Senior Product Designer (Design Lead)
-        </p>
-        <p className="text-[13px] text-muted-foreground mb-4">
-          <time dateTime="2019-11">Nov 2019</time> –{" "}
-          <time dateTime="2022-05">May 2022</time> &middot; 2 years 7 months
-          &middot; Brighton
-        </p>
+      <ExperienceCard
+        id="automation-squared"
+        intro={
+          <>
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Automation Squared
+            </h3>
+            <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
+              Senior Product Designer (Design Lead)
+            </p>
+            <p className="text-[13px] text-muted-foreground">
+              <time dateTime="2019-11">Nov 2019</time> –{" "}
+              <time dateTime="2022-05">May 2022</time> &middot; 2 years 7 months
+              &middot; Brighton
+            </p>
+          </>
+        }
+      >
         <ul className="space-y-2">
           {[
             "Led a multidisciplinary team of 8 (2 designers, 6 developers) across concurrent product builds, owning design quality, design direction, and delivery pace",
@@ -127,18 +143,24 @@ export function ExperienceCards() {
       </ExperienceCard>
 
       {/* Catalyst EU */}
-      <ExperienceCard id="catalyst-eu">
-        <h3 className="text-base font-semibold text-foreground mb-1">
-          Catalyst EU
-        </h3>
-        <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-          UX Designer
-        </p>
-        <p className="text-[13px] text-muted-foreground mb-4">
-          <time dateTime="2019-05">May 2019</time> –{" "}
-          <time dateTime="2019-10">Oct 2019</time> &middot; 5 months &middot;
-          Brighton
-        </p>
+      <ExperienceCard
+        id="catalyst-eu"
+        intro={
+          <>
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Catalyst EU
+            </h3>
+            <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
+              UX Designer
+            </p>
+            <p className="text-[13px] text-muted-foreground">
+              <time dateTime="2019-05">May 2019</time> –{" "}
+              <time dateTime="2019-10">Oct 2019</time> &middot; 5 months &middot;
+              Brighton
+            </p>
+          </>
+        }
+      >
         <p className="text-[15px] leading-[1.65] mb-4">
           Short-term embedded designer, delivering research-led UX improvements
           and leading design for an internationally deployed learning product.
@@ -160,18 +182,24 @@ export function ExperienceCards() {
       </ExperienceCard>
 
       {/* Barkweb */}
-      <ExperienceCard id="barkweb">
-        <h3 className="text-base font-semibold text-foreground mb-1">
-          Barkweb
-        </h3>
-        <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-          UX Designer
-        </p>
-        <p className="text-[13px] text-muted-foreground mb-4">
-          <time dateTime="2015-08">Aug 2015</time> –{" "}
-          <time dateTime="2019-06">Jun 2019</time> &middot; 3 years 11 months
-          &middot; Eastbourne
-        </p>
+      <ExperienceCard
+        id="barkweb"
+        intro={
+          <>
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Barkweb
+            </h3>
+            <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
+              UX Designer
+            </p>
+            <p className="text-[13px] text-muted-foreground">
+              <time dateTime="2015-08">Aug 2015</time> –{" "}
+              <time dateTime="2019-06">Jun 2019</time> &middot; 3 years 11 months
+              &middot; Eastbourne
+            </p>
+          </>
+        }
+      >
         <ul className="space-y-2">
           {[
             "Identified key drop-off points in client journeys using Google Analytics, translating data into targeted design interventions and presenting findings directly to clients",
@@ -188,37 +216,42 @@ export function ExperienceCards() {
       </ExperienceCard>
 
       {/* Earlier Roles */}
-      <ExperienceCard id="earlier-roles">
-        <h3 className="text-base font-semibold text-foreground mb-1">
-          Earlier Roles
-        </h3>
-        <p className="text-[13px] text-muted-foreground mb-4">
-          <time dateTime="2009">2009</time> –{" "}
-          <time dateTime="2015">2015</time>
-        </p>
-        <p className="text-[14px] leading-[1.85] text-muted-foreground">
-          <strong className="text-[color:var(--cv-body)] font-medium">
-            Creative Designer &middot; Freelance
-          </strong>{" "}
-          <em>(Jan–Aug 2015, Brighton)</em> &nbsp;&middot;&nbsp;
-          <strong className="text-[color:var(--cv-body)] font-medium">
-            Web Designer &middot; Stealth Media Group
-          </strong>{" "}
-          <em>(2014, Brighton)</em> &nbsp;&middot;&nbsp;
-          <strong className="text-[color:var(--cv-body)] font-medium">
-            Web Design &amp; Admin &middot; Hanwood Holdings
-          </strong>{" "}
-          <em>(2013, Gibraltar)</em> &nbsp;&middot;&nbsp;
-          <strong className="text-[color:var(--cv-body)] font-medium">
-            Web Design &amp; Admin &middot; Equity Services
-          </strong>{" "}
-          <em>(2011–2012, Marbella)</em> &nbsp;&middot;&nbsp;
-          <strong className="text-[color:var(--cv-body)] font-medium">
-            Web Designer &middot; East Sussex Design
-          </strong>{" "}
-          <em>(2009–2011, Seaford)</em>
-        </p>
-      </ExperienceCard>
+      <ExperienceCard
+        id="earlier-roles"
+        intro={
+          <>
+            <h3 className="text-base font-semibold text-foreground mb-1">
+              Earlier Roles
+            </h3>
+            <p className="text-[13px] text-muted-foreground mb-4">
+              <time dateTime="2009">2009</time> –{" "}
+              <time dateTime="2015">2015</time>
+            </p>
+            <p className="text-[14px] leading-[1.85] text-muted-foreground">
+              <strong className="text-[color:var(--cv-body)] font-medium">
+                Creative Designer &middot; Freelance
+              </strong>{" "}
+              <em>(Jan–Aug 2015, Brighton)</em> &nbsp;&middot;&nbsp;
+              <strong className="text-[color:var(--cv-body)] font-medium">
+                Web Designer &middot; Stealth Media Group
+              </strong>{" "}
+              <em>(2014, Brighton)</em> &nbsp;&middot;&nbsp;
+              <strong className="text-[color:var(--cv-body)] font-medium">
+                Web Design &amp; Admin &middot; Hanwood Holdings
+              </strong>{" "}
+              <em>(2013, Gibraltar)</em> &nbsp;&middot;&nbsp;
+              <strong className="text-[color:var(--cv-body)] font-medium">
+                Web Design &amp; Admin &middot; Equity Services
+              </strong>{" "}
+              <em>(2011–2012, Marbella)</em> &nbsp;&middot;&nbsp;
+              <strong className="text-[color:var(--cv-body)] font-medium">
+                Web Designer &middot; East Sussex Design
+              </strong>{" "}
+              <em>(2009–2011, Seaford)</em>
+            </p>
+          </>
+        }
+      />
     </>
   );
 }
