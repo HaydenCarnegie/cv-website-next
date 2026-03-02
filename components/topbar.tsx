@@ -44,10 +44,13 @@ export function Topbar({ onMenuClick }: TopbarProps) {
           HC
         </Link>
 
+        {/* Left spacer — offset by sidebar width on lg so search centres over the content column */}
+        <div className="flex-1 lg:pl-[240px]" />
+
         {/* Search trigger */}
         <button
           onClick={() => setCmdOpen(true)}
-          className="flex items-center gap-2 h-8 px-3 rounded-sm border border-border bg-background text-muted-foreground text-sm hover:border-ring transition-colors flex-1 max-w-64 text-left"
+          className="flex items-center gap-2 h-8 px-3 rounded-sm border border-border bg-background text-muted-foreground text-sm hover:border-ring transition-colors w-full max-w-64 text-left"
           aria-label="Open search"
         >
           <span className="flex-1">Search...</span>
@@ -56,7 +59,7 @@ export function Topbar({ onMenuClick }: TopbarProps) {
           </kbd>
         </button>
 
-        {/* Spacer */}
+        {/* Right spacer */}
         <div className="flex-1" />
 
         {/* Contact */}
