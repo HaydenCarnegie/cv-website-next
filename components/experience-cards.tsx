@@ -45,7 +45,7 @@ export function ExperienceCards() {
               Leviathan UX
             </h3>
             <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-              Senior Product Designer (Director)
+              Senior Product Designer (Contractor)
             </p>
             <p className="text-[13px] text-muted-foreground">
               <time dateTime="2022-05">May 2022</time> – Present &middot; Remote,
@@ -223,35 +223,52 @@ export function ExperienceCards() {
             <h3 className="text-base font-semibold text-foreground mb-1">
               Earlier Roles
             </h3>
-            <p className="text-[13px] text-muted-foreground mb-4">
+            <p className="text-[13px] text-muted-foreground">
               <time dateTime="2009">2009</time> –{" "}
               <time dateTime="2015">2015</time>
             </p>
-            <p className="text-[14px] leading-[1.85] text-muted-foreground">
-              <strong className="text-[color:var(--cv-body)] font-medium">
-                Creative Designer &middot; Freelance
-              </strong>{" "}
-              <em>(Jan–Aug 2015, Brighton)</em> &nbsp;&middot;&nbsp;
-              <strong className="text-[color:var(--cv-body)] font-medium">
-                Web Designer &middot; Stealth Media Group
-              </strong>{" "}
-              <em>(2014, Brighton)</em> &nbsp;&middot;&nbsp;
-              <strong className="text-[color:var(--cv-body)] font-medium">
-                Web Design &amp; Admin &middot; Hanwood Holdings
-              </strong>{" "}
-              <em>(2013, Gibraltar)</em> &nbsp;&middot;&nbsp;
-              <strong className="text-[color:var(--cv-body)] font-medium">
-                Web Design &amp; Admin &middot; Equity Services
-              </strong>{" "}
-              <em>(2011–2012, Marbella)</em> &nbsp;&middot;&nbsp;
-              <strong className="text-[color:var(--cv-body)] font-medium">
-                Web Designer &middot; East Sussex Design
-              </strong>{" "}
-              <em>(2009–2011, Seaford)</em>
-            </p>
           </>
         }
-      />
+      >
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left font-semibold px-2 py-1 text-muted-foreground">Company</th>
+                <th className="text-left font-semibold px-2 py-1 text-muted-foreground">Dates</th>
+                <th className="text-left font-semibold px-2 py-1 text-muted-foreground">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b last:border-0 border-border">
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Freelance</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">Jan–Aug 2015, Brighton</td>
+                <td className="px-2 py-1 text-muted-foreground">Creative Designer</td>
+              </tr>
+              <tr className="border-b last:border-0 border-border">
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Stealth Media Group</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2014, Brighton</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Designer</td>
+              </tr>
+              <tr className="border-b last:border-0 border-border">
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Hanwood Holdings</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2013, Gibraltar</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Design &amp; Admin</td>
+              </tr>
+              <tr className="border-b last:border-0 border-border">
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Equity Services</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2011–2012, Marbella</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Design &amp; Admin</td>
+              </tr>
+              <tr>
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">East Sussex Design</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2009–2011, Seaford</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Designer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ExperienceCard>
     </>
   );
 }
