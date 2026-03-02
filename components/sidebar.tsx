@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-import { CV_PLAIN_TEXT } from "@/lib/cv-data";
 
 interface SidebarProps {
   open: boolean;
@@ -52,20 +50,6 @@ function GroupLabel({ children }: { children: React.ReactNode }) {
 }
 
 export function Sidebar({ open, onClose }: SidebarProps) {
-  const { theme, setTheme } = useTheme();
-
-  function downloadTxt() {
-    const blob = new Blob([CV_PLAIN_TEXT], { type: "text/plain;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "hayden-carnegie-cv.txt";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-
   return (
     <>
       {/* Mobile overlay */}
@@ -82,7 +66,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         aria-label="CV navigation"
         className={cn(
           "fixed top-14 left-0 w-[240px] h-[calc(100vh-3.5rem)] z-40",
-          "bg-[var(--sidebar)] border-r border-border",
           "flex flex-col overflow-y-auto overflow-x-hidden",
           "transition-transform duration-250 ease-in-out",
           "lg:translate-x-0",
@@ -124,26 +107,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <NavItem href="/education#qualifications">Qualifications</NavItem>
           </div>
 
-        </div>
-
-        {/* Footer */}
-        <div className="px-4 py-4 border-t border-border flex flex-col gap-2">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="flex items-center gap-2 h-8 px-2 text-[13px] text-muted-foreground border border-border rounded-sm hover:bg-accent hover:text-[color:var(--cv-body)] transition-colors w-full text-left"
-            aria-label="Toggle dark mode"
-          >
-            <span>{theme === "dark" ? "☾" : "☀"}</span>
-            <span>{theme === "dark" ? "Dark mode" : "Light mode"}</span>
-          </button>
-          <button
-            onClick={downloadTxt}
-            className="flex items-center gap-2 h-8 px-2 text-[13px] text-muted-foreground border border-border rounded-sm hover:bg-accent hover:text-[color:var(--cv-body)] transition-colors w-full text-left"
-            aria-label="Download plain text CV"
-          >
-            <span>↓</span>
-            <span>Plain Text</span>
-          </button>
         </div>
       </nav>
     </>
