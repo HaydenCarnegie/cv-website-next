@@ -4,13 +4,26 @@ import { Badge } from "@/components/ui/badge";
 export const metadata: Metadata = {
   title: "Skills — Hayden Carnegie · Senior Product Designer",
   description:
-    "Design practice, domain knowledge, and tools for Senior Product Designer Hayden Carnegie — fintech, healthtech, regulatory UX specialist.",
+    "Design practice, domain expertise, and tools: 10+ years across fintech UX (PSD2, Open Banking, KYC), healthtech, and regulated product design. Figma, Framer, design systems, and end-to-end UX leadership.",
 };
 
-const skillGroups = [
+type SkillGroup = {
+  id: string;
+  label: string;
+  statement: string;
+  skills?: string[];
+  subGroups?: {
+    label: string;
+    skills: string[];
+  }[];
+};
+
+const skillGroups: SkillGroup[] = [
   {
     id: "design-practice",
     label: "Design Practice",
+    statement:
+      "10+ years leading design from first principles through delivery — spanning user research, journey mapping, interaction design, prototyping, and design system architecture. Experienced leading multidisciplinary teams, facilitating discovery workshops, and embedding design rigour into Agile delivery at pace.",
     skills: [
       "Product Design",
       "UX Strategy",
@@ -35,44 +48,90 @@ const skillGroups = [
   {
     id: "domain-knowledge",
     label: "Domain Knowledge",
-    skills: [
-      "Open Banking (PSD2)",
-      "Payment UX",
-      "KYC / Onboarding Compliance",
-      "Regulatory UX",
-      "Compliance-aware Design",
-      "Regulated Financial Products",
-      "Digital Health",
-      "Clinical UX",
-      "Behavioural Design",
-      "High-trust & High-stakes UX",
-      "Data-driven Design",
+    statement:
+      "Deep specialism in high-trust, compliance-aware product design. Brings regulatory literacy as a design asset — translating complex compliance requirements into clear, conversion-optimised user journeys.",
+    subGroups: [
+      {
+        label: "Fintech",
+        skills: [
+          "Open Banking (PSD2)",
+          "Payment UX",
+          "KYC / Onboarding Compliance",
+          "Regulatory UX",
+          "Compliance-aware Design",
+          "Regulated Financial Products",
+          "Data-driven Design",
+        ],
+      },
+      {
+        label: "Health & Behaviour",
+        skills: [
+          "Digital Health",
+          "Clinical UX",
+          "Behavioural Design",
+          "High-trust & High-stakes UX",
+        ],
+      },
     ],
   },
   {
     id: "tools",
     label: "Tools",
-    skills: [
-      "Figma",
-      "Framer",
-      "Sketch",
-      "Invision",
-      "Abstract",
-      "Zeplin",
-      "Storybook",
-      "Amplitude",
-      "Google Analytics",
-      "HTML",
-      "CSS",
-      "jQuery",
-      "JSON",
+    statement:
+      "Primary toolset centred on Figma for design and prototyping, with hands-on experience across the full design-to-dev pipeline. Comfortable reading and writing code, bridging handoff gaps, and working directly in tools alongside engineers.",
+    subGroups: [
+      {
+        label: "Design & Prototyping",
+        skills: ["Figma", "Framer", "Sketch", "Invision", "Abstract", "Zeplin", "Storybook"],
+      },
+      {
+        label: "Analytics & Research",
+        skills: ["Amplitude", "Google Analytics"],
+      },
+      {
+        label: "Frontend",
+        skills: ["HTML", "CSS", "jQuery", "JSON"],
+      },
     ],
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Hayden Carnegie",
+  hasSkill: [
+    "Product Design",
+    "UX Strategy",
+    "Design Leadership",
+    "Open Banking (PSD2)",
+    "Payment UX",
+    "KYC / Onboarding Compliance",
+    "Regulatory UX",
+    "Digital Health",
+    "Design System Architecture",
+    "Figma",
+    "Framer",
+    "User Research",
+    "Behavioural Design",
+  ],
+  knowsAbout: [
+    "Regulated Financial Products",
+    "Fintech UX",
+    "Healthtech UX",
+    "Compliance-aware Design",
+    "Design Operations",
+  ],
+};
+
 export default function SkillsPage() {
   return (
     <main className="max-w-[860px] mx-auto px-12 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <header className="mb-16 pb-8 border-b border-border">
         <h1 className="text-[2.25rem] font-bold text-foreground tracking-[-0.02em] leading-[1.15] mb-2">
           Hayden Carnegie
@@ -86,26 +145,50 @@ export default function SkillsPage() {
         </h2>
 
         {skillGroups.map((group) => (
-          <div
-            key={group.id}
-            id={group.id}
-            className="mb-8 last:mb-0 scroll-mt-8"
-          >
-            <h3 className="text-[13px] font-semibold text-foreground mb-3">
-              {group.label}
-            </h3>
-            <div className="flex flex-wrap gap-2" role="list">
-              {group.skills.map((skill) => (
-                <Badge
-                  key={skill}
-                  variant="outline"
-                  role="listitem"
-                  className="font-mono text-[12px] font-normal"
-                >
-                  {skill}
-                </Badge>
-              ))}
-            </div>
+          <div key={group.id} id={group.id} className="mb-12 last:mb-0 scroll-mt-8">
+            <h3 className="text-base font-semibold text-foreground mb-2">{group.label}</h3>
+            <p className="text-[14px] leading-[1.75] text-[color:var(--cv-body)] mb-5">
+              {group.statement}
+            </p>
+
+            {group.skills && (
+              <div className="flex flex-wrap gap-2" role="list">
+                {group.skills.map((skill) => (
+                  <Badge
+                    key={skill}
+                    variant="outline"
+                    role="listitem"
+                    className="font-mono text-[12px] font-normal"
+                  >
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            )}
+
+            {group.subGroups && (
+              <div className="flex flex-col gap-5">
+                {group.subGroups.map((sub) => (
+                  <div key={sub.label}>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.06em] text-muted-foreground mb-2">
+                      {sub.label}
+                    </p>
+                    <div className="flex flex-wrap gap-2" role="list">
+                      {sub.skills.map((skill) => (
+                        <Badge
+                          key={skill}
+                          variant="outline"
+                          role="listitem"
+                          className="font-mono text-[12px] font-normal"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </section>
