@@ -80,6 +80,7 @@ Open Banking (PSD2), Payment UX, KYC / Onboarding Compliance, Regulatory UX, Com
 Figma, Framer, Sketch, Invision, Abstract, Zeplin, Storybook, Amplitude, Google Analytics, HTML, CSS, jQuery, JSON
 
 ---
+`;
 
 export const CV_PLAIN_TEXT = `HAYDEN CARNEGIE
 Senior Product Designer
