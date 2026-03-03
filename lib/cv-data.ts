@@ -81,11 +81,6 @@ Figma, Framer, Sketch, Invision, Abstract, Zeplin, Storybook, Amplitude, Google 
 
 ---
 
-## Education
-
-11 GCSEs (C or above)
-`;
-
 export const CV_PLAIN_TEXT = `HAYDEN CARNEGIE
 Senior Product Designer
 

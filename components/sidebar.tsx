@@ -21,8 +21,6 @@ const ALL_SECTION_IDS = [
   "design-practice",
   "domain-knowledge",
   "tools",
-  // Education
-  "qualifications",
 ];
 
 interface SidebarProps {
@@ -177,15 +175,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               Tools
             </NavItem>
           </div>
-
-          {/* Education */}
-          <div className="mb-5">
-            <GroupLabel>Education</GroupLabel>
-            <NavItem href="/education#qualifications" sectionId="qualifications" {...nav}>
-              Qualifications
-            </NavItem>
-          </div>
-
         </div>
       </nav>
     </>

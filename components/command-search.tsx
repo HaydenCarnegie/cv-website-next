@@ -93,12 +93,6 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
               Skills
             </span>
           </CommandItem>
-          <CommandItem onSelect={() => navigate("/education")}>
-            <span className="flex items-center gap-2">
-              <FileText className="w-4 h-4 text-muted-foreground shrink-0" />
-              Education
-            </span>
-          </CommandItem>
         </CommandGroup>
 
         <CommandSeparator />
@@ -167,17 +161,6 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
             <span className="flex items-center gap-2">
               <Wrench className="w-4 h-4 text-muted-foreground shrink-0" />
               Tools
-            </span>
-          </CommandItem>
-        </CommandGroup>
-
-        <CommandSeparator />
-
-        <CommandGroup heading="Education">
-          <CommandItem onSelect={() => navigate("/education#qualifications")}>
-            <span className="flex items-center gap-2">
-              <GraduationCap className="w-4 h-4 text-muted-foreground shrink-0" />
-              Qualifications
             </span>
           </CommandItem>
         </CommandGroup>

@@ -18,7 +18,7 @@ function ExperienceCard({
   });
 
   return (
-    <article id={id} className="mb-12 last:mb-0 scroll-mt-8">
+    <article id={id} className="mb-12 last:mb-0 scroll-mt-20">
       <div
         ref={ref as React.RefObject<HTMLDivElement>}
         className={cn(
@@ -70,7 +70,7 @@ export function ExperienceCards() {
           </li>
           <li
             id="voltio"
-            className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+            className="scroll-mt-20 text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
           >
             Redesigned onboarding, authentication, and payment flow UX for
             regulated fintech clients including Volt.io — contributing to a
@@ -84,7 +84,7 @@ export function ExperienceCards() {
           </li>
           <li
             id="healthpath"
-            className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+            className="scroll-mt-20 text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
           >
             Led end-to-end UX for Healthpath — redesigning sign-up and
             verification flows for NHS and personal health data handling, and

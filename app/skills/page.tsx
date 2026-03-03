@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
+import { PageHeader } from "@/components/page-header";
 
 export const metadata: Metadata = {
   title: "Skills — Hayden Carnegie · Senior Product Designer",
@@ -132,12 +133,7 @@ export default function SkillsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <header className="mb-16 pb-8 border-b border-border">
-        <h1 className="text-[2.25rem] font-bold text-foreground tracking-[-0.02em] leading-[1.15] mb-2">
-          Hayden Carnegie
-        </h1>
-        <p className="text-base text-muted-foreground">Senior Product Designer</p>
-      </header>
+      <PageHeader />
 
       <section aria-labelledby="skills-heading">
         <h2 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-6 pb-3 border-b border-border">
