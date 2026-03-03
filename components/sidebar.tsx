@@ -12,11 +12,16 @@ const ALL_SECTION_IDS = [
   "contact",
   // Experience
   "leviathan-ux",
+  "velocity-xyz",
   "voltio",
+  "ifx-payments",
   "healthpath",
   "automation-squared",
   "catalyst-eu",
   "earlier-roles",
+  // Case Studies
+  "case-studies",
+  "volt-io-fuzebox",
   // Skills
   "design-practice",
   "domain-knowledge",
@@ -140,13 +145,19 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <NavItem
               href="/experience"
               sectionId="leviathan-ux"
-              childSectionIds={["voltio", "healthpath"]}
+              childSectionIds={["velocity-xyz", "voltio", "ifx-payments", "healthpath"]}
               {...nav}
             >
               Leviathan UX
             </NavItem>
+            <NavItem href="/experience#velocity-xyz" sectionId="velocity-xyz" sub {...nav}>
+              ↳ Velocity.xyz
+            </NavItem>
             <NavItem href="/experience#voltio" sectionId="voltio" sub {...nav}>
               ↳ Volt.io
+            </NavItem>
+            <NavItem href="/experience#ifx-payments" sectionId="ifx-payments" sub {...nav}>
+              ↳ IFX Payments
             </NavItem>
             <NavItem href="/experience#healthpath" sectionId="healthpath" sub {...nav}>
               ↳ Healthpath
@@ -159,6 +170,17 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             </NavItem>
             <NavItem href="/experience#earlier-roles" sectionId="earlier-roles" {...nav}>
               Earlier Roles
+            </NavItem>
+          </div>
+
+          {/* Case Studies */}
+          <div className="mb-5">
+            <GroupLabel>Case Studies</GroupLabel>
+            <NavItem href="/case-studies" sectionId="case-studies" childSectionIds={["volt-io-fuzebox"]} {...nav}>
+              All Case Studies
+            </NavItem>
+            <NavItem href="/case-studies/volt-io-fuzebox" sectionId="volt-io-fuzebox" sub {...nav}>
+              ↳ Volt.io Fuzebox
             </NavItem>
           </div>
 

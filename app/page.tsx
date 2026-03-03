@@ -100,25 +100,23 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-          {/* Case Study — Volt.io (col-span-2) */}
+          {/* Case Study — Volt.io Fuzebox (col-span-2) */}
           <Card className="md:col-span-2">
             <CardHeader>
               <Badge className="w-fit mb-1">Case Study</Badge>
-              <CardTitle className="text-base">Volt.io — Open Banking Checkout</CardTitle>
+              <CardTitle className="text-base">Volt.io — Fuzebox Merchant Portal Redesign</CardTitle>
               <CardDescription>
-                Redesigning payment flow UX for a regulated fintech platform
+                Full platform redesign across 20+ flows for an Open Banking payments infrastructure company
               </CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-sm leading-relaxed">
-                Placeholder — redesigned onboarding, authentication, and payment
-                flow UX contributing to up to 20% checkout conversion uplift and
-                80% repeat-purchase rates for merchants on the network.
+                Led a ground-up redesign of Fuzebox as sole designer — transforming a dev-built MVP into a cohesive, brand-aligned merchant portal. Covered login through to payouts, onboarding, AIS verification, and more, underpinned by a design system built from scratch.
               </p>
             </CardContent>
             <CardFooter>
               <Button variant="ghost" size="sm" asChild>
-                <Link href="/experience#voltio">Read more →</Link>
+                <Link href="/case-studies/volt-io-fuzebox">Read case study →</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -176,28 +174,26 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
-          {/* Quote 1 */}
+          {/* Quote 1 — Marta Duda, Volt.io */}
           <Card>
             <CardContent className="pt-6">
               <blockquote className="text-sm leading-relaxed italic text-muted-foreground border-l-2 border-border pl-4 mb-3">
-                &ldquo;Placeholder quote from employer or client about working
-                with Hayden.&rdquo;
+                &ldquo;Smooth and seamless design to development collaboration.&rdquo;
               </blockquote>
               <cite className="text-xs text-muted-foreground not-italic">
-                — Name, Company
+                — Marta Duda, Volt.io
               </cite>
             </CardContent>
           </Card>
 
-          {/* Quote 2 */}
+          {/* Quote 2 — Hanna Kazlouskaya, Volt.io */}
           <Card>
             <CardContent className="pt-6">
               <blockquote className="text-sm leading-relaxed italic text-muted-foreground border-l-2 border-border pl-4 mb-3">
-                &ldquo;Placeholder second quote from employer or client about
-                working with Hayden.&rdquo;
+                &ldquo;Rapid and understands the story problem near instantly.&rdquo;
               </blockquote>
               <cite className="text-xs text-muted-foreground not-italic">
-                — Name, Company
+                — Hanna Kazlouskaya, Volt.io
               </cite>
             </CardContent>
           </Card>

@@ -104,10 +104,22 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
               Leviathan UX
             </span>
           </CommandItem>
+          <CommandItem onSelect={() => navigate("/experience#velocity-xyz")}>
+            <span className="flex items-center gap-2">
+              <Briefcase className="w-4 h-4 text-muted-foreground shrink-0" />
+              Velocity.xyz
+            </span>
+          </CommandItem>
           <CommandItem onSelect={() => navigate("/experience#voltio")}>
             <span className="flex items-center gap-2">
               <Briefcase className="w-4 h-4 text-muted-foreground shrink-0" />
               Volt.io
+            </span>
+          </CommandItem>
+          <CommandItem onSelect={() => navigate("/experience#ifx-payments")}>
+            <span className="flex items-center gap-2">
+              <Briefcase className="w-4 h-4 text-muted-foreground shrink-0" />
+              IFX Payments
             </span>
           </CommandItem>
           <CommandItem onSelect={() => navigate("/experience#healthpath")}>

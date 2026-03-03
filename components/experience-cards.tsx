@@ -50,60 +50,103 @@ export function ExperienceCards() {
             <p className="text-[13px] text-muted-foreground">
               <time dateTime="2022-05">May 2022</time> – Present &middot; Remote,
               United Kingdom
-              
             </p>
           </>
         }
       >
-        <p className="text-[15px] leading-[1.65] mb-4">
-          Lead designer across a portfolio of high-trust fintech and healthtech
-          products, including Volt.io, Evolve, IFX, Habitual, and Healthpath.
-          Operating as an embedded senior design partner — owning design
-          strategy, research, and delivery end-to-end across regulated,
-          high-stakes environments.
+        <p className="text-[15px] leading-[1.65] mb-6">
+          Lead designer across a portfolio of high-trust fintech, healthtech,
+          and crypto products. Operating as an embedded senior design partner —
+          owning design strategy, research, and delivery end-to-end across
+          regulated, high-stakes environments.
         </p>
-        <ul className="space-y-2">
-          <li className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground">
-            Designed the UX infrastructure underpinning £2.5B+ in transactions
-            across Open Banking, cross-border payments, and crypto — working
-            within strict PSD2, FCA, and KYC/AML compliance constraints
-          </li>
-          <li
-            id="voltio"
-            className="scroll-mt-20 text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
-          >
-            Redesigned onboarding, authentication, and payment flow UX for
-            regulated fintech clients including Volt.io — contributing to a
-            platform that achieves up to 20% checkout conversion uplift and 80%
-            repeat-purchase rates for merchants on its network
-          </li>
-          <li className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground">
-            Established scalable design systems adopted across multiple
-            products, creating a single source of truth for UI components and
-            cutting design-to-dev handoff friction across distributed teams
-          </li>
-          <li
-            id="healthpath"
-            className="scroll-mt-20 text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
-          >
-            Led end-to-end UX for Healthpath — redesigning sign-up and
-            verification flows for NHS and personal health data handling, and
-            rebuilding ecommerce navigation and appointment management UX —
-            delivering measurable uplift in ecommerce sales through improved
-            product discovery and equipping admin users with a more capable
-            self-service panel
-          </li>
-          <li className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground">
-            Partnered directly with founders and C-suite to define product
-            strategy, translate business goals into design direction, and align
-            cross-functional teams — providing design leadership at board level
-          </li>
-          <li className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground">
-            Conducted data-driven, research-led design across payment flows,
-            onboarding journeys, and trust-critical interactions — applying
-            usability testing and iterative validation throughout
-          </li>
-        </ul>
+
+        {/* Velocity.xyz */}
+        <div id="velocity-xyz" className="scroll-mt-20 mb-6">
+          <h4 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3 pb-2 border-b border-border">
+            Velocity.xyz — stablecoin on/off ramp platform
+          </h4>
+          <ul className="space-y-2">
+            {[
+              "Owned end-to-end product design from greenfield — scoping and delivering the full wireframe architecture before branding was finalised, covering wallet creation, account management, beneficiary flows, transaction history, and send funds journeys.",
+              "Simplified complex stablecoin fee structures into a clear, digestible breakdown UX — reducing cognitive load in a trust-sensitive, regulated space where transparency directly affects conversion.",
+              "Rethemed ShadCN into a bespoke design system, establishing a scalable component foundation ready to absorb final brand decisions without rework.",
+              "Produced sales collateral in parallel with product delivery, supporting the commercial team while the core product was still in development.",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Volt.io */}
+        <div id="voltio" className="scroll-mt-20 mb-6">
+          <h4 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3 pb-2 border-b border-border">
+            Volt.io — Open Banking payments platform
+          </h4>
+          <ul className="space-y-2">
+            {[
+              "Designed pitch and sales collateral directly with C-suite, contributing to a $60M+ Series B close and helping secure enterprise clients including Shopify, Worldpay, Farfetch, and Primer.",
+              "Embedded as sole design partner across the Fusebox product suite, owning look and feel across Entity Switcher, Circuit Breaker, Pay by Bank, Pay by Link, and Verify flows.",
+              "Reworked the Pay by Bank end-user flow across multiple breakpoints and devices — UX research, simplified journey design, and a 40% improvement in complete transfers.",
+              "Owned and extended the Volt design system across the full product suite, establishing consistent patterns and interaction standards that accelerated development cycles.",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* IFX Payments */}
+        <div id="ifx-payments" className="scroll-mt-20 mb-6">
+          <h4 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3 pb-2 border-b border-border">
+            IFX Payments — FX and cross-border payments platform
+          </h4>
+          <ul className="space-y-2">
+            {[
+              "Embedded across two parallel workstreams: platform UX improvements and an AGP system acquisition, migrating and redesigning a legacy platform to a modern foundation.",
+              "Designed authentication, sign-up, and compliance flows from scratch — addressing accessibility gaps and inconsistent implementation that had accumulated across the existing product.",
+              "Rebuilt batch file payment processing end-to-end, reducing user friction in a high-stakes, compliance-adjacent workflow.",
+              "Matured the design library into a functioning design system, establishing a single source of truth for development and eliminating inconsistency across the platform.",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Healthpath */}
+        <div id="healthpath" className="scroll-mt-20">
+          <h4 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3 pb-2 border-b border-border">
+            Healthpath — consumer healthtech and wellness platform
+          </h4>
+          <ul className="space-y-2">
+            {[
+              "Resolved sign-up drop-off and style inconsistencies across the platform, tightening the onboarding flow and contributing to a directional uplift in active users and subscriptions.",
+              "Designed and shipped a consultant booking directory, giving users a new capability to discover and book health practitioners directly through the platform.",
+              "Improved subscription and ecommerce flows alongside compliance-aware sign-up journeys, balancing conversion goals against data handling requirements in a health context.",
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
       </ExperienceCard>
 
       {/* Automation Squared */}
