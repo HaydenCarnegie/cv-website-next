@@ -145,7 +145,7 @@ export default function SkillsPage() {
         </h2>
 
         {skillGroups.map((group) => (
-          <div key={group.id} id={group.id} className="mb-12 last:mb-0 scroll-mt-8">
+          <div key={group.id} id={group.id} className="mb-12 last:mb-0 scroll-mt-20">
             <h3 className="text-base font-semibold text-foreground mb-2">{group.label}</h3>
             <p className="text-[14px] leading-[1.75] text-[color:var(--cv-body)] mb-5">
               {group.statement}

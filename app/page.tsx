@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <main className="max-w-[860px] mx-auto px-12 py-16">
       {/* Header */}
-      <header className="mb-16 pb-8 border-b border-border">
+      <header className="mb-16 pb-8">
         <h1 className="text-[2.25rem] font-bold text-foreground tracking-[-0.02em] leading-[1.15] mb-2">
           Hayden Carnegie
         </h1>
@@ -27,7 +27,7 @@ export default function HomePage() {
       </header>
 
       {/* Summary */}
-      <section id="summary" className="mb-16 scroll-mt-8" aria-labelledby="summary-heading">
+      <section id="summary" className="mb-16 scroll-mt-20" aria-labelledby="summary-heading">
         <h2 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-6 pb-3 border-b border-border">
           Summary
         </h2>
@@ -45,7 +45,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="mb-16 scroll-mt-8" aria-labelledby="contact-heading">
+      <section id="contact" className="mb-16 scroll-mt-20" aria-labelledby="contact-heading">
         <h2 className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-6 pb-3 border-b border-border">
           Contact
         </h2>

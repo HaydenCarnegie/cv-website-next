@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export function useInView(options?: IntersectionObserverInit) {
   const ref = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
+  const optionsRef = useRef(options);
 
   useEffect(() => {
     const el = ref.current;
@@ -12,11 +13,11 @@ export function useInView(options?: IntersectionObserverInit) {
 
     const observer = new IntersectionObserver(([entry]) => {
       setInView(entry.isIntersecting);
-    }, options);
+    }, optionsRef.current);
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [options]);
+  }, []);
 
   return { ref, inView };
 }

@@ -140,7 +140,7 @@ export function CommandSearch({ open, onOpenChange }: CommandSearchProps) {
               Catalyst EU
             </span>
           </CommandItem>
-          <CommandItem onSelect={() => navigate("/experience#barkweb")}>
+          <CommandItem onSelect={() => navigate("/experience#earlier-roles")}>
             <span className="flex items-center gap-2">
               <Briefcase className="w-4 h-4 text-muted-foreground shrink-0" />
               Barkweb

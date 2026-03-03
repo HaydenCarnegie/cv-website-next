@@ -16,7 +16,6 @@ const ALL_SECTION_IDS = [
   "healthpath",
   "automation-squared",
   "catalyst-eu",
-  "barkweb",
   "earlier-roles",
   // Skills
   "design-practice",
@@ -117,6 +116,9 @@ export function Sidebar({ open, onClose }: SidebarProps) {
       {/* Sidebar */}
       <nav
         aria-label="CV navigation"
+        onClick={(e) => {
+          if ((e.target as Element).closest("a")) onClose();
+        }}
         className={cn(
           "fixed top-14 left-0 w-[240px] h-[calc(100vh-3.5rem)] z-40",
           "flex flex-col overflow-y-auto overflow-x-hidden",
@@ -156,9 +158,6 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             </NavItem>
             <NavItem href="/experience#catalyst-eu" sectionId="catalyst-eu" {...nav}>
               Catalyst EU
-            </NavItem>
-            <NavItem href="/experience#barkweb" sectionId="barkweb" {...nav}>
-              Barkweb
             </NavItem>
             <NavItem href="/experience#earlier-roles" sectionId="earlier-roles" {...nav}>
               Earlier Roles

@@ -50,6 +50,7 @@ export function ExperienceCards() {
             <p className="text-[13px] text-muted-foreground">
               <time dateTime="2022-05">May 2022</time> – Present &middot; Remote,
               United Kingdom
+              
             </p>
           </>
         }
@@ -181,40 +182,6 @@ export function ExperienceCards() {
         </ul>
       </ExperienceCard>
 
-      {/* Barkweb */}
-      <ExperienceCard
-        id="barkweb"
-        intro={
-          <>
-            <h3 className="text-base font-semibold text-foreground mb-1">
-              Barkweb
-            </h3>
-            <p className="text-sm font-medium text-[color:var(--cv-body)] mb-1">
-              UX Designer
-            </p>
-            <p className="text-[13px] text-muted-foreground">
-              <time dateTime="2015-08">Aug 2015</time> –{" "}
-              <time dateTime="2019-06">Jun 2019</time> &middot; 3 years 11 months
-              &middot; Eastbourne
-            </p>
-          </>
-        }
-      >
-        <ul className="space-y-2">
-          {[
-            "Identified key drop-off points in client journeys using Google Analytics, translating data into targeted design interventions and presenting findings directly to clients",
-            "Partnered with clients to define design requirements, translating briefs into interactive prototypes using Framer and developing web templates on Barkweb's custom CMS using HTML5 and SCSS",
-          ].map((item, i) => (
-            <li
-              key={i}
-              className="text-[14px] leading-[1.65] relative pl-4 before:content-['–'] before:absolute before:left-0 before:text-muted-foreground"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </ExperienceCard>
-
       {/* Earlier Roles */}
       <ExperienceCard
         id="earlier-roles"
@@ -225,7 +192,7 @@ export function ExperienceCards() {
             </h3>
             <p className="text-[13px] text-muted-foreground">
               <time dateTime="2009">2009</time> –{" "}
-              <time dateTime="2015">2015</time>
+              <time dateTime="2019">2019</time>
             </p>
           </>
         }
@@ -241,14 +208,19 @@ export function ExperienceCards() {
             </thead>
             <tbody>
               <tr className="border-b last:border-0 border-border">
+                <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Barkweb</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">Aug 2015 – May 2019, Eastbourne</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Designer, Developer</td>
+              </tr>
+              <tr className="border-b last:border-0 border-border">
                 <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Freelance</td>
-                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">Jan–Aug 2015, Brighton</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">Jan – Aug 2015, Brighton</td>
                 <td className="px-2 py-1 text-muted-foreground">Creative Designer</td>
               </tr>
               <tr className="border-b last:border-0 border-border">
                 <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Stealth Media Group</td>
                 <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2014, Brighton</td>
-                <td className="px-2 py-1 text-muted-foreground">Web Designer</td>
+                <td className="px-2 py-1 text-muted-foreground">Web Designer, Asset Generator</td>
               </tr>
               <tr className="border-b last:border-0 border-border">
                 <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Hanwood Holdings</td>
@@ -257,13 +229,13 @@ export function ExperienceCards() {
               </tr>
               <tr className="border-b last:border-0 border-border">
                 <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">Equity Services</td>
-                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2011–2012, Marbella</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2011 – 2012, Marbella</td>
                 <td className="px-2 py-1 text-muted-foreground">Web Design &amp; Admin</td>
               </tr>
               <tr>
                 <td className="px-2 py-1 text-[color:var(--cv-body)] font-medium">East Sussex Design</td>
-                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2009–2011, Seaford</td>
-                <td className="px-2 py-1 text-muted-foreground">Web Designer</td>
+                <td className="px-2 py-1 text-muted-foreground whitespace-nowrap">2009 – 2011, Seaford</td>
+                <td className="px-2 py-1 text-muted-foreground">Junior Web Designer</td>
               </tr>
             </tbody>
           </table>

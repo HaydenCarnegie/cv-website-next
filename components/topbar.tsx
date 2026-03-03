@@ -20,10 +20,7 @@ interface TopbarProps {
 
 export function Topbar({ onMenuClick }: TopbarProps) {
   const [cmdOpen, setCmdOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -60,7 +57,7 @@ export function Topbar({ onMenuClick }: TopbarProps) {
 
   return (
     <>
-      <header className="no-print sticky top-0 h-14 z-50 bg-background/95 backdrop-blur border-b border-border flex items-center px-4 gap-3 relative">
+      <header className="no-print sticky top-0 h-14 z-50 bg-background/95 backdrop-blur border-b border-border flex items-center px-4 gap-3">
         {/* Mobile hamburger */}
         <button
           className="lg:hidden flex items-center justify-center w-8 h-8 rounded-sm hover:bg-accent transition-colors"
@@ -108,13 +105,15 @@ export function Topbar({ onMenuClick }: TopbarProps) {
 
         {/* Theme toggle */}
         <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          onClick={() => {
+            const isDark = document.documentElement.classList.contains("dark");
+            setTheme(isDark ? "light" : "dark");
+          }}
           className="ml-auto flex items-center justify-center w-8 h-8 rounded-sm hover:bg-accent transition-colors"
           aria-label="Toggle theme"
         >
-          {mounted && (theme === "dark"
-            ? <Sun className="w-4 h-4 text-muted-foreground" />
-            : <Moon className="w-4 h-4 text-muted-foreground" />)}
+          <Sun className="hidden dark:block w-4 h-4 text-muted-foreground" />
+          <Moon className="block dark:hidden w-4 h-4 text-muted-foreground" />
         </button>
 
         {/* Download dropdown */}

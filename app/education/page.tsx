@@ -21,7 +21,7 @@ export default function EducationPage() {
           Education
         </h2>
 
-        <article id="qualifications" className="scroll-mt-8">
+        <article id="qualifications" className="scroll-mt-20">
           <h3 className="text-base font-semibold text-foreground mb-1">
             Secondary Education
           </h3>
