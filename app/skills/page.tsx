@@ -168,7 +168,6 @@ export default function SkillsPage() {
                 rows={[
                   { skill: "Figma", description: "Lead design from discovery to prototype — building layout systems, interactive prototypes, and handoff-ready assets." },
                   { skill: "Framer", description: "Create high-fidelity interactive prototypes that feel like shipped products for user testing and stakeholder alignment." },
-                  { skill: "Sketch", description: "Rapid sketching and early ideation with reusable symbols and design components." },
                   { skill: "Invision", description: "Validate concept flows through interactive mockups with client and team feedback loops." },
                   { skill: "Abstract", description: "Version control and collaboration on design artifacts across teams." },
                   { skill: "Zeplin", description: "Bridge design-to-development handoff with accurate specs, measurements, and assets." },
