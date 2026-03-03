@@ -77,7 +77,7 @@ Product Design, UX Strategy, Design Leadership, User Research, Stakeholder Manag
 Open Banking (PSD2), Payment UX, KYC / Onboarding Compliance, Regulatory UX, Compliance-aware Design, Regulated Financial Products, Digital Health, Clinical UX, Behavioural Design, High-trust & High-stakes UX, Data-driven Design
 
 ### Tools
-Figma, Framer, Sketch, Invision, Abstract, Zeplin, Storybook, Amplitude, Google Analytics, HTML, CSS, jQuery, JSON
+Figma, Framer, Invision, Abstract, Zeplin, Storybook, Amplitude, Google Analytics, HTML, CSS, jQuery, JSON
 
 ---
 `;
@@ -199,7 +199,7 @@ Digital Health, Clinical UX, Behavioural Design,
 High-trust & High-stakes UX, Data-driven Design
 
 Tools:
-Figma, Framer, Sketch, Invision, Abstract, Zeplin,
+Figma, Framer, Invision, Abstract, Zeplin,
 Storybook, Amplitude, Google Analytics, HTML, CSS, jQuery, JSON
 
 ================================================================================
