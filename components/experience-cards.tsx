@@ -56,9 +56,9 @@ export function ExperienceCards() {
       >
         <p className="text-[15px] leading-[1.65] mb-6">
           Lead designer across a portfolio of high-trust fintech, healthtech,
-          and crypto products. Operating as an embedded senior design partner —
-          owning design strategy, research, and delivery end-to-end across
-          regulated, high-stakes environments.
+          and crypto products. Embedded as a senior design partner: owning
+          design strategy, research, and delivery end-to-end across regulated,
+          high-stakes environments.
         </p>
 
         {/* Velocity.xyz */}
@@ -68,8 +68,8 @@ export function ExperienceCards() {
           </h4>
           <ul className="space-y-2">
             {[
-              "Owned end-to-end product design from greenfield — scoping and delivering the full wireframe architecture before branding was finalised, covering wallet creation, account management, beneficiary flows, transaction history, and send funds journeys.",
-              "Simplified complex stablecoin fee structures into a clear, digestible breakdown UX — reducing cognitive load in a trust-sensitive, regulated space where transparency directly affects conversion.",
+              "Owned end-to-end product design from greenfield, scoping and delivering the full wireframe architecture before branding was finalised, covering wallet creation, account management, beneficiary flows, transaction history, and send funds journeys.",
+              "Simplified complex stablecoin fee structures into a clear, digestible breakdown UX, reducing cognitive load in a trust-sensitive, regulated space where transparency directly affects conversion.",
               "Rethemed ShadCN into a bespoke design system, establishing a scalable component foundation ready to absorb final brand decisions without rework.",
               "Produced sales collateral in parallel with product delivery, supporting the commercial team while the core product was still in development.",
             ].map((item, i) => (
@@ -92,7 +92,7 @@ export function ExperienceCards() {
             {[
               "Designed pitch and sales collateral directly with C-suite, contributing to a $60M+ Series B close and helping secure enterprise clients including Shopify, Worldpay, Farfetch, and Primer.",
               "Embedded as sole design partner across the Fusebox product suite, owning look and feel across Entity Switcher, Circuit Breaker, Pay by Bank, Pay by Link, and Verify flows.",
-              "Reworked the Pay by Bank end-user flow across multiple breakpoints and devices — UX research, simplified journey design, and a 40% improvement in complete transfers.",
+              "Reworked the Pay by Bank end-user flow across multiple breakpoints and devices: UX research, simplified journey design, and a 40% improvement in complete transfers.",
               "Owned and extended the Volt design system across the full product suite, establishing consistent patterns and interaction standards that accelerated development cycles.",
             ].map((item, i) => (
               <li
@@ -113,7 +113,7 @@ export function ExperienceCards() {
           <ul className="space-y-2">
             {[
               "Embedded across two parallel workstreams: platform UX improvements and an AGP system acquisition, migrating and redesigning a legacy platform to a modern foundation.",
-              "Designed authentication, sign-up, and compliance flows from scratch — addressing accessibility gaps and inconsistent implementation that had accumulated across the existing product.",
+              "Designed authentication, sign-up, and compliance flows from scratch, addressing accessibility gaps and inconsistent implementation that had accumulated across the existing product.",
               "Rebuilt batch file payment processing end-to-end, reducing user friction in a high-stakes, compliance-adjacent workflow.",
               "Matured the design library into a functioning design system, establishing a single source of truth for development and eliminating inconsistency across the platform.",
             ].map((item, i) => (
@@ -171,10 +171,10 @@ export function ExperienceCards() {
         <ul className="space-y-2">
           {[
             "Led a multidisciplinary team of 8 (2 designers, 6 developers) across concurrent product builds, owning design quality, design direction, and delivery pace",
-            "Established the team's first design system and standardised screen layout conventions across all client projects — cutting design-to-dev handoff time by approximately 10 hours per sprint by giving developers a consistent structure for reviewing screens and generating accurate build estimations",
+            "Established the team's first design system and standardised screen layout conventions across all client projects, cutting design-to-dev handoff time by approximately 10 hours per sprint by giving developers a consistent structure for reviewing screens and generating accurate build estimations",
             "Mentored junior designers through structured critique sessions and growth frameworks, improving team output quality and supporting their professional development",
-            "Facilitated discovery workshops with clients to define product scope, user needs, and design direction — running usability testing and iterative prototype validation throughout delivery to ensure design decisions were grounded in real user behaviour",
-            "Defined and maintained design processes within Agile delivery — establishing sprint rhythms, review cadences, and handoff standards that kept engineering and design in sync across concurrent builds",
+            "Facilitated discovery workshops with clients to define product scope, user needs, and design direction; ran usability testing and iterative prototype validation throughout delivery to ensure design decisions were grounded in real user behaviour",
+            "Defined and maintained design processes within Agile delivery, establishing sprint rhythms, review cadences, and handoff standards that kept engineering and design in sync across concurrent builds",
           ].map((item, i) => (
             <li
               key={i}
@@ -212,7 +212,7 @@ export function ExperienceCards() {
         <ul className="space-y-2">
           {[
             "Led UX improvements to the Learning Management System, using GA-backed data to identify underperforming user journeys and prioritise design interventions",
-            "Led design for a learning app deployed to communities in Africa in partnership with Médecins Sans Frontières — designing for low-connectivity and accessibility-first constraints",
+            "Led design for a learning app deployed to communities in Africa in partnership with Médecins Sans Frontières, designing for low-connectivity and accessibility-first constraints",
             "Facilitated design workshops to align internal stakeholders on product scope and user needs",
           ].map((item, i) => (
             <li

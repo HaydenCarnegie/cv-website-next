@@ -93,7 +93,7 @@ export default function SkillsPage() {
         <div id="design-practice" className="mb-12 scroll-mt-20">
           <h3 className="text-base font-semibold text-foreground mb-2">Design Practice</h3>
           <p className="text-[14px] leading-[1.75] text-[color:var(--cv-body)] mb-5">
-            10+ years leading design from first principles through delivery — spanning user research,
+            10+ years leading design from first principles through delivery, spanning user research,
             journey mapping, interaction design, prototyping, and design system architecture.
             Experienced leading multidisciplinary teams, facilitating discovery workshops, and
             embedding design rigour into Agile delivery at pace.
@@ -127,7 +127,7 @@ export default function SkillsPage() {
           <h3 className="text-base font-semibold text-foreground mb-2">Domain Knowledge</h3>
           <p className="text-[14px] leading-[1.75] text-[color:var(--cv-body)] mb-5">
             Deep specialism in high-trust, compliance-aware product design. Brings regulatory
-            literacy as a design asset — translating complex compliance requirements into clear,
+            literacy as a design asset, translating complex compliance requirements into clear,
             conversion-optimised user journeys.
           </p>
           <SkillTable

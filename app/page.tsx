@@ -29,9 +29,9 @@ export default function HomePage() {
         <p className="text-[15px] leading-[1.75] max-w-[68ch]">
           Senior Product Designer and founder of Leviathan UX, with 10+ years
           of design leadership across fintech, crypto, and healthtech.
-          Specialises in regulatory UX and compliance-aware design — from
+          Specialises in regulatory UX and compliance-aware design, from
           PSD2-compliant Open Banking and cross-border payments to digital
-          health — delivering end-to-end product design underpinned by user
+          health, delivering end-to-end product design underpinned by user
           research and scalable design systems. Track record of designing UX
           infrastructure that has underpinned £2.5B+ in transactions, partnering
           directly with founders and C-suite to shape product strategy and drive
@@ -111,7 +111,7 @@ export default function HomePage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm leading-relaxed">
-                Led a ground-up redesign of Fuzebox as sole designer — transforming a dev-built MVP into a cohesive, brand-aligned merchant portal. Covered login through to payouts, onboarding, AIS verification, and more, underpinned by a design system built from scratch.
+                Led a ground-up redesign of Fuzebox as sole designer, transforming a dev-built MVP into a cohesive, brand-aligned merchant portal. Covered login through to payouts, onboarding, AIS verification, and more, underpinned by a design system built from scratch.
               </p>
             </CardContent>
             <CardFooter>
@@ -132,7 +132,7 @@ export default function HomePage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm leading-relaxed">
-                Placeholder — redesigned sign-up and verification flows for NHS
+                Placeholder: redesigned sign-up and verification flows for NHS
                 and personal health data handling, rebuilding ecommerce
                 navigation and appointment management UX.
               </p>
@@ -152,7 +152,7 @@ export default function HomePage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm leading-relaxed">
-                Placeholder — established scalable design systems adopted across
+                Placeholder: established scalable design systems adopted across
                 multiple products, creating a single source of truth and cutting
                 design-to-dev handoff friction.
               </p>
@@ -167,7 +167,7 @@ export default function HomePage() {
             </CardHeader>
             <CardContent>
               <p className="text-sm leading-relaxed">
-                Placeholder — 10+ years designing within PSD2, FCA, KYC/AML,
+                Placeholder: 10+ years designing within PSD2, FCA, KYC/AML,
                 and NHS compliance constraints across Open Banking, cross-border
                 payments, and digital health products.
               </p>

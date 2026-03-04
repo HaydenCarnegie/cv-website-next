@@ -8,7 +8,7 @@ hayden.a.carnegie@gmail.com | +44 (0) 7903 700 886 | Eastbourne, United Kingdom
 
 ## Summary
 
-Senior Product Designer and founder of Leviathan UX, with 10+ years of design leadership across fintech, crypto, and healthtech. Specialises in regulatory UX and compliance-aware design — from PSD2-compliant Open Banking and cross-border payments to digital health — delivering end-to-end product design underpinned by user research and scalable design systems. Track record of designing UX infrastructure that has underpinned GBP2.5B+ in transactions, partnering directly with founders and C-suite to shape product strategy and drive cross-functional alignment.
+Senior Product Designer and founder of Leviathan UX, with 10+ years of design leadership across fintech, crypto, and healthtech. Specialises in regulatory UX and compliance-aware design, from PSD2-compliant Open Banking and cross-border payments to digital health, delivering end-to-end product design underpinned by user research and scalable design systems. Track record of designing UX infrastructure that has underpinned GBP2.5B+ in transactions, partnering directly with founders and C-suite to shape product strategy and drive cross-functional alignment.
 
 ---
 
@@ -19,10 +19,10 @@ Senior Product Designer and founder of Leviathan UX, with 10+ years of design le
 
 Lead designer across a portfolio of high-trust fintech and healthtech products, including Volt.io, Evolve, IFX, Habitual, and Healthpath.
 
-- Designed the UX infrastructure underpinning GBP2.5B+ in transactions across Open Banking, cross-border payments, and crypto — working within strict PSD2, FCA, and KYC/AML compliance constraints
-- Redesigned onboarding, authentication, and payment flow UX for regulated fintech clients including Volt.io — contributing to a platform that achieves up to 20% checkout conversion uplift and 80% repeat-purchase rates
+- Designed the UX infrastructure underpinning GBP2.5B+ in transactions across Open Banking, cross-border payments, and crypto, working within strict PSD2, FCA, and KYC/AML compliance constraints
+- Redesigned onboarding, authentication, and payment flow UX for regulated fintech clients including Volt.io, contributing to a platform that achieves up to 20% checkout conversion uplift and 80% repeat-purchase rates
 - Established scalable design systems adopted across multiple products, creating a single source of truth for UI components and cutting design-to-dev handoff friction across distributed teams
-- Led end-to-end UX for Healthpath — redesigning sign-up and verification flows for NHS and personal health data handling, and rebuilding ecommerce navigation and appointment management UX
+- Led end-to-end UX for Healthpath, redesigning sign-up and verification flows for NHS and personal health data handling and rebuilding ecommerce navigation and appointment management UX
 - Partnered directly with founders and C-suite to define product strategy, translate business goals into design direction, and align cross-functional teams
 - Conducted data-driven, research-led design across payment flows, onboarding journeys, and trust-critical interactions
 
@@ -32,10 +32,10 @@ Lead designer across a portfolio of high-trust fintech and healthtech products, 
 *Nov 2019 – May 2022 | 2 years 7 months | Brighton*
 
 - Led a multidisciplinary team of 8 (2 designers, 6 developers) across concurrent product builds, owning design quality, direction, and delivery pace
-- Established the team's first design system and standardised screen layout conventions — cutting design-to-dev handoff time by approximately 10 hours per sprint
+- Established the team's first design system and standardised screen layout conventions, cutting design-to-dev handoff time by approximately 10 hours per sprint
 - Mentored junior designers through structured critique sessions and growth frameworks
 - Facilitated discovery workshops with clients to define product scope, user needs, and design direction
-- Defined and maintained design processes within Agile delivery — sprint rhythms, review cadences, and handoff standards
+- Defined and maintained design processes within Agile delivery: sprint rhythms, review cadences, and handoff standards
 
 ---
 
@@ -45,7 +45,7 @@ Lead designer across a portfolio of high-trust fintech and healthtech products, 
 Short-term embedded designer, delivering research-led UX improvements and leading design for an internationally deployed learning product.
 
 - Led UX improvements to the Learning Management System using GA-backed data
-- Led design for a learning app deployed to communities in Africa in partnership with Medecins Sans Frontieres — designing for low-connectivity and accessibility-first constraints
+- Led design for a learning app deployed to communities in Africa in partnership with Medecins Sans Frontieres, designing for low-connectivity and accessibility-first constraints
 - Facilitated design workshops to align internal stakeholders
 
 ---
@@ -96,8 +96,8 @@ SUMMARY
 
 Senior Product Designer and founder of Leviathan UX, with 10+ years of design
 leadership across fintech, crypto, and healthtech. Specialises in regulatory UX
-and compliance-aware design -- from PSD2-compliant Open Banking and cross-border
-payments to digital health -- delivering end-to-end product design underpinned
+and compliance-aware design, from PSD2-compliant Open Banking and cross-border
+payments to digital health, delivering end-to-end product design underpinned
 by user research and scalable design systems. Track record of designing UX
 infrastructure that has underpinned GBP2.5B+ in transactions, partnering
 directly with founders and C-suite to shape product strategy and drive
@@ -114,16 +114,16 @@ Lead designer across a portfolio of high-trust fintech and healthtech products,
 including Volt.io, Evolve, IFX, Habitual, and Healthpath.
 
 - Designed the UX infrastructure underpinning GBP2.5B+ in transactions across
-  Open Banking, cross-border payments, and crypto -- working within strict PSD2,
+  Open Banking, cross-border payments, and crypto, working within strict PSD2,
   FCA, and KYC/AML compliance constraints
 - Redesigned onboarding, authentication, and payment flow UX for regulated
-  fintech clients including Volt.io -- contributing to a platform that achieves
+  fintech clients including Volt.io, contributing to a platform that achieves
   up to 20% checkout conversion uplift and 80% repeat-purchase rates
 - Established scalable design systems adopted across multiple products, creating
   a single source of truth for UI components and cutting design-to-dev handoff
   friction across distributed teams
-- Led end-to-end UX for Healthpath -- redesigning sign-up and verification flows
-  for NHS and personal health data handling, and rebuilding ecommerce navigation
+- Led end-to-end UX for Healthpath, redesigning sign-up and verification flows
+  for NHS and personal health data handling and rebuilding ecommerce navigation
   and appointment management UX
 - Partnered directly with founders and C-suite to define product strategy,
   translate business goals into design direction, and align cross-functional teams
@@ -138,13 +138,13 @@ Nov 2019 - May 2022 | 2 years 7 months | Brighton
 - Led a multidisciplinary team of 8 (2 designers, 6 developers) across
   concurrent product builds, owning design quality, direction, and delivery pace
 - Established the team's first design system and standardised screen layout
-  conventions -- cutting design-to-dev handoff time by approximately 10 hours per
+  conventions, cutting design-to-dev handoff time by approximately 10 hours per
   sprint
 - Mentored junior designers through structured critique sessions and growth
   frameworks
 - Facilitated discovery workshops with clients to define product scope, user
   needs, and design direction
-- Defined and maintained design processes within Agile delivery -- sprint
+- Defined and maintained design processes within Agile delivery: sprint
   rhythms, review cadences, and handoff standards
 
 --------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ leading design for an internationally deployed learning product.
 
 - Led UX improvements to the Learning Management System using GA-backed data
 - Led design for a learning app deployed to communities in Africa in partnership
-  with Medecins Sans Frontieres -- designing for low-connectivity and
+  with Medecins Sans Frontieres, designing for low-connectivity and
   accessibility-first constraints
 - Facilitated design workshops to align internal stakeholders
 
