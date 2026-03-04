@@ -22,6 +22,8 @@ const ALL_SECTION_IDS = [
   // Case Studies
   "case-studies",
   "volt-io-fuzebox",
+  "volt-io-checkout-3",
+  "velocity-xyz-platform",
   // Skills
   "design-practice",
   "domain-knowledge",
@@ -53,21 +55,19 @@ function NavItem({
   pathname,
 }: NavItemProps) {
   const [path] = href.split("#");
-  const isOnPath = path === "/" ? pathname === "/" : pathname === path;
+  const isOnPath = path === "/" ? pathname === "/" : pathname === path || pathname.startsWith(path + "/");
 
   let isActive = false;
   let isBoldOnly = false;
 
   if (isOnPath && activeSection) {
     if (activeSection === sectionId) {
-      // Sub-items get bold text only; top-level items get full highlight
       if (sub) {
         isBoldOnly = true;
       } else {
         isActive = true;
       }
     } else if (childSectionIds.includes(activeSection)) {
-      // Keep parent highlighted when a child section is active
       isActive = true;
     }
   }
@@ -92,11 +92,14 @@ function NavItem({
   );
 }
 
-function GroupLabel({ children }: { children: React.ReactNode }) {
+function GroupLabel({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <span className="block text-[11px] font-medium uppercase tracking-widest text-muted-foreground px-3 py-1 mb-1">
+    <Link
+      href={href}
+      className="block text-[11px] font-medium uppercase tracking-widest text-muted-foreground px-3 py-1 mb-1 hover:text-foreground transition-colors"
+    >
       {children}
-    </span>
+    </Link>
   );
 }
 
@@ -104,6 +107,11 @@ export function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const activeSection = useActiveSection(ALL_SECTION_IDS);
   const nav = { activeSection, pathname };
+
+  const isHome = pathname === "/";
+  const isExperience = pathname === "/experience" || pathname.startsWith("/experience/");
+  const isCaseStudies = pathname === "/case-studies" || pathname.startsWith("/case-studies/");
+  const isSkills = pathname === "/skills" || pathname.startsWith("/skills/");
 
   return (
     <>
@@ -134,69 +142,89 @@ export function Sidebar({ open, onClose }: SidebarProps) {
 
           {/* Overview */}
           <div className="mb-5">
-            <GroupLabel>Overview</GroupLabel>
-            <NavItem href="/#summary" sectionId="summary" {...nav}>Summary</NavItem>
-            <NavItem href="/#contact" sectionId="contact" {...nav}>Contact</NavItem>
+            <GroupLabel href="/">Overview</GroupLabel>
+            {isHome && (
+              <>
+                <NavItem href="/#summary" sectionId="summary" {...nav}>Summary</NavItem>
+                <NavItem href="/#contact" sectionId="contact" {...nav}>Contact</NavItem>
+              </>
+            )}
           </div>
 
           {/* Experience */}
           <div className="mb-5">
-            <GroupLabel>Experience</GroupLabel>
-            <NavItem
-              href="/experience"
-              sectionId="leviathan-ux"
-              childSectionIds={["velocity-xyz", "voltio", "ifx-payments", "healthpath"]}
-              {...nav}
-            >
-              Leviathan UX
-            </NavItem>
-            <NavItem href="/experience#velocity-xyz" sectionId="velocity-xyz" sub {...nav}>
-              ↳ Velocity.xyz
-            </NavItem>
-            <NavItem href="/experience#voltio" sectionId="voltio" sub {...nav}>
-              ↳ Volt.io
-            </NavItem>
-            <NavItem href="/experience#ifx-payments" sectionId="ifx-payments" sub {...nav}>
-              ↳ IFX Payments
-            </NavItem>
-            <NavItem href="/experience#healthpath" sectionId="healthpath" sub {...nav}>
-              ↳ Healthpath
-            </NavItem>
-            <NavItem href="/experience#automation-squared" sectionId="automation-squared" {...nav}>
-              Automation Squared
-            </NavItem>
-            <NavItem href="/experience#catalyst-eu" sectionId="catalyst-eu" {...nav}>
-              Catalyst EU
-            </NavItem>
-            <NavItem href="/experience#earlier-roles" sectionId="earlier-roles" {...nav}>
-              Earlier Roles
-            </NavItem>
+            <GroupLabel href="/experience">Experience</GroupLabel>
+            {isExperience && (
+              <>
+                <NavItem
+                  href="/experience"
+                  sectionId="leviathan-ux"
+                  childSectionIds={["velocity-xyz", "voltio", "ifx-payments", "healthpath"]}
+                  {...nav}
+                >
+                  Leviathan UX
+                </NavItem>
+                <NavItem href="/experience#velocity-xyz" sectionId="velocity-xyz" sub {...nav}>
+                  ↳ Velocity.xyz
+                </NavItem>
+                <NavItem href="/experience#voltio" sectionId="voltio" sub {...nav}>
+                  ↳ Volt.io
+                </NavItem>
+                <NavItem href="/experience#ifx-payments" sectionId="ifx-payments" sub {...nav}>
+                  ↳ IFX Payments
+                </NavItem>
+                <NavItem href="/experience#healthpath" sectionId="healthpath" sub {...nav}>
+                  ↳ Healthpath
+                </NavItem>
+                <NavItem href="/experience#automation-squared" sectionId="automation-squared" {...nav}>
+                  Automation Squared
+                </NavItem>
+                <NavItem href="/experience#catalyst-eu" sectionId="catalyst-eu" {...nav}>
+                  Catalyst EU
+                </NavItem>
+                <NavItem href="/experience#earlier-roles" sectionId="earlier-roles" {...nav}>
+                  Earlier Roles
+                </NavItem>
+              </>
+            )}
           </div>
 
           {/* Case Studies */}
           <div className="mb-5">
-            <GroupLabel>Case Studies</GroupLabel>
-            <NavItem href="/case-studies" sectionId="case-studies" childSectionIds={["volt-io-fuzebox"]} {...nav}>
-              All Case Studies
-            </NavItem>
-            <NavItem href="/case-studies/volt-io-fuzebox" sectionId="volt-io-fuzebox" sub {...nav}>
-              ↳ Volt.io Fuzebox
-            </NavItem>
+            <GroupLabel href="/case-studies">Case Studies</GroupLabel>
+            {isCaseStudies && (
+              <>
+                <NavItem href="/case-studies/volt-io-fuzebox" sectionId="volt-io-fuzebox" {...nav}>
+                  Volt Fuzebox
+                </NavItem>
+                <NavItem href="/case-studies/volt-io-checkout-3" sectionId="volt-io-checkout-3" {...nav}>
+                  Volt Checkout
+                </NavItem>
+                <NavItem href="/case-studies/velocity-xyz-platform" sectionId="velocity-xyz-platform" {...nav}>
+                  Velocity Platform
+                </NavItem>
+              </>
+            )}
           </div>
 
           {/* Skills */}
           <div className="mb-5">
-            <GroupLabel>Skills</GroupLabel>
-            <NavItem href="/skills#design-practice" sectionId="design-practice" {...nav}>
-              Design Practice
-            </NavItem>
-            <NavItem href="/skills#domain-knowledge" sectionId="domain-knowledge" {...nav}>
-              Domain Knowledge
-            </NavItem>
-            <NavItem href="/skills#tools" sectionId="tools" {...nav}>
-              Tools
-            </NavItem>
+            <GroupLabel href="/skills">Skills</GroupLabel>
+            {isSkills && (
+              <>
+                <NavItem href="/skills#design-practice" sectionId="design-practice" {...nav}>
+                  Design Practice
+                </NavItem>
+                <NavItem href="/skills#domain-knowledge" sectionId="domain-knowledge" {...nav}>
+                  Domain Knowledge
+                </NavItem>
+                <NavItem href="/skills#tools" sectionId="tools" {...nav}>
+                  Tools
+                </NavItem>
+              </>
+            )}
           </div>
+
         </div>
       </nav>
     </>
