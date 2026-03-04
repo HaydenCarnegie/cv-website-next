@@ -27,6 +27,24 @@ const caseStudies = [
       "Full platform redesign across 20+ flows for an Open Banking payments infrastructure company — transforming a dev-built MVP into a cohesive, brand-aligned merchant portal.",
     colSpan: true,
   },
+  {
+    slug: "volt-io-checkout-3",
+    badge: "Case Study",
+    title: "Volt.io — Checkout 3.0",
+    meta: "Open Banking · 2023–2024",
+    description:
+      "Ground-up rebuild of Volt's consumer-facing checkout — replacing a conversion-leaking 2.0 experience with a production-ready checkout supporting 20+ countries, 5 locale variants, two payment rails, and full white-label merchant customisation.",
+    colSpan: false,
+  },
+  {
+    slug: "velocity-xyz-platform",
+    badge: "Case Study",
+    title: "Velocity.XYZ — Platform Design",
+    meta: "Fintech · Jun 2025–Feb 2026",
+    description:
+      "Greenfield platform design for a stablecoin on/off ramp fintech — sole designer across 7+ core flows, Travel Rule compliance, and a bespoke ShadCN-based design system, delivered pre-launch in 9 months ahead of Series A.",
+    colSpan: false,
+  },
 ];
 
 export default function CaseStudiesPage() {
