@@ -26,7 +26,7 @@ export default function FuzeboxCaseStudyPage() {
           <Badge>Case Study</Badge>
           <span className="text-[11px] text-muted-foreground uppercase tracking-[0.06em]">Volt.io · Open Banking · 2022–2023</span>
         </div>
-        <h1 className="text-3xl font-semibold tracking-tight mb-4">
+        <h1 className="text-3xl font-semibold tracking-tight mb-4 text-foreground">
           Fuzebox Merchant Portal Redesign
         </h1>
 
