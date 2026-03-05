@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CaseStudyCarousel } from "@/components/case-study/case-study-carousel";
 
 export const metadata: Metadata = {
   title: "Velocity.XYZ Platform — Leviathan UX · Hayden Carnegie",
@@ -97,10 +98,15 @@ export default function VelocityXYZCaseStudyPage() {
                 Stablecoin infrastructure, fiat/crypto rails, and Travel Rule compliance aren&apos;t standard UX territory. Getting into the detail early with the founders and PMs wasn&apos;t optional — it was the only way to design flows that were technically honest, not just visually coherent.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: competitor analysis or research artefacts */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
-              <p className="text-xs text-muted-foreground">Image — research &amp; discovery</p>
-            </div>
+            <CaseStudyCarousel
+              aspectRatio="16/9"
+              variant="contained"
+              caption="Research & discovery"
+              slides={[
+                { src: '/case-studies/velocity-xyz/discovery-1-light.png', darkSrc: '/case-studies/velocity-xyz/discovery-1-dark.png', alt: 'Competitor analysis — brand, visual design, product offering, pricing, and UX review' },
+                { src: '/case-studies/velocity-xyz/discovery-2-light.png', darkSrc: '/case-studies/velocity-xyz/discovery-2-dark.png', alt: 'Competitor UI pattern research — screens and components showing common design conventions across fintech and crypto platforms' },
+              ]}
+            />
           </div>
 
           {/* Design Direction */}
@@ -114,10 +120,15 @@ export default function VelocityXYZCaseStudyPage() {
                 The product was built and partially handed off before branding was finalised. Re-theming was a token-level operation, not a redraw, because the ShadCN foundation was treated as a proper design system from day one rather than a placeholder. Additional screens were designed against new requirements as they surfaced post-theming.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: wireframe state vs themed state comparison */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
-              <p className="text-xs text-muted-foreground">Image — wireframe to themed comparison</p>
-            </div>
+            {/* TODO: export from Figma — wireframe state vs themed state comparison */}
+            <CaseStudyCarousel
+              aspectRatio="16/9"
+              variant="contained"
+              caption="Wireframe to themed comparison"
+              slides={[
+                { src: '/case-studies/velocity-xyz/design-direction-placeholder.png', alt: 'Wireframe state alongside the themed design system applied' },
+              ]}
+            />
           </div>
 
           {/* Iterative Flow Design */}
@@ -131,10 +142,15 @@ export default function VelocityXYZCaseStudyPage() {
                 Travel Rule was the most demanding flow. The FATF requirement to share originator and beneficiary data on crypto transactions above a threshold varies by jurisdiction — and Velocity needed to handle both fiat and crypto rails, with an integration to third-party Travel Rule software adding an external dependency to an already complex multi-step journey. The design challenge was handling jurisdictional variance without making the flow feel bureaucratic to users who just want to move money.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: Travel Rule flow or send funds journey */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
-              <p className="text-xs text-muted-foreground">Image — flow design / Travel Rule</p>
-            </div>
+            {/* TODO: export from Figma — Travel Rule flow or send funds journey */}
+            <CaseStudyCarousel
+              aspectRatio="16/9"
+              variant="contained"
+              caption="Flow design — Travel Rule compliance journey"
+              slides={[
+                { src: '/case-studies/velocity-xyz/flow-travel-rule-placeholder.png', alt: 'Travel Rule compliance flow screens' },
+              ]}
+            />
           </div>
 
           {/* Prototyping & Handoff */}
@@ -145,10 +161,15 @@ export default function VelocityXYZCaseStudyPage() {
                 Screens were handed off on a rolling basis rather than as a single delivery, with a standup rhythm keeping design and engineering aligned. Design QA sessions caught visual and interaction drift before it compounded, keeping the cost of corrections low throughout the build.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: final hi-fi screens */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
-              <p className="text-xs text-muted-foreground">Image — final screens / handoff</p>
-            </div>
+            {/* TODO: export from Figma — final hi-fi screens */}
+            <CaseStudyCarousel
+              aspectRatio="16/9"
+              variant="contained"
+              caption="Final screens — prototyping & handoff"
+              slides={[
+                { src: '/case-studies/velocity-xyz/final-screens-placeholder.png', alt: 'Final high-fidelity screens handed off to engineering' },
+              ]}
+            />
           </div>
 
         </div>
