@@ -121,6 +121,11 @@ export default function VoltCheckout3CaseStudyPage() {
                   darkSrc: "/case-studies/volt-checkout/discovery-flow-3-dark.png",
                   alt: "Volt Checkout 2.0 — third discovery flow diagram",
                 },
+                {
+                  src: "/case-studies/volt-checkout/discovery-flow-4-light.png",
+                  darkSrc: "/case-studies/volt-checkout/discovery-flow-4-dark.png",
+                  alt: "Volt Checkout 2.0 — fourth discovery flow diagram",
+                },
               ]}
               className="mb-6 mt-0"
             />
