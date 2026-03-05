@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -103,9 +104,14 @@ export default function VoltCheckout3CaseStudyPage() {
                 Stakeholder sessions with the PMs clarified priority order. Conversion rate was the primary metric — anything that reduced abandonment took precedence over visual refinement. That framing mattered for sequencing decisions throughout the project.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: 2.0 flow audit annotated with failure points, or a side-by-side of a key 2.0 state vs. 3.0 equivalent (bank selection) */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center mb-6">
-              <p className="text-xs text-muted-foreground">Image — 2.0 flow audit / failure point mapping</p>
+            <div className="rounded-lg overflow-hidden border border-border mb-6">
+              <Image
+                src="/case-studies/volt-checkout/discovery-flow.png"
+                alt="Volt Checkout 2.0 flow audit — failure point mapping across the payment journey"
+                width={1226}
+                height={980}
+                className="w-full h-auto"
+              />
             </div>
 
             {/* Competitor analysis */}
