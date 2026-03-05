@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CaseStudyCarousel } from "@/components/case-study/case-study-carousel";
 
 export const metadata: Metadata = {
   title: "Volt.io Checkout 3.0 — Leviathan UX · Hayden Carnegie",
@@ -104,22 +104,21 @@ export default function VoltCheckout3CaseStudyPage() {
                 Stakeholder sessions with the PMs clarified priority order. Conversion rate was the primary metric — anything that reduced abandonment took precedence over visual refinement. That framing mattered for sequencing decisions throughout the project.
               </p>
             </div>
-            <div className="rounded-lg overflow-hidden border border-border mb-6">
-              <Image
-                src="/case-studies/volt-checkout/discovery-flow-light.png"
-                alt="Volt Checkout 2.0 flow audit — failure point mapping across the payment journey"
-                width={1226}
-                height={980}
-                className="w-full h-auto block dark:hidden"
-              />
-              <Image
-                src="/case-studies/volt-checkout/discovery-flow-dark.png"
-                alt="Volt Checkout 2.0 flow audit — failure point mapping across the payment journey"
-                width={1226}
-                height={980}
-                className="w-full h-auto hidden dark:block"
-              />
-            </div>
+            <CaseStudyCarousel
+              slides={[
+                {
+                  src: "/case-studies/volt-checkout/discovery-flow-1-light.png",
+                  darkSrc: "/case-studies/volt-checkout/discovery-flow-1-dark.png",
+                  alt: "Volt Checkout 2.0 flow audit — failure point mapping across the payment journey",
+                },
+                {
+                  src: "/case-studies/volt-checkout/discovery-flow-2-light.png",
+                  darkSrc: "/case-studies/volt-checkout/discovery-flow-2-dark.png",
+                  alt: "Volt Checkout 2.0 — second discovery flow diagram",
+                },
+              ]}
+              className="mb-6 mt-0"
+            />
 
             {/* Competitor analysis */}
             <div>
