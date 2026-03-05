@@ -60,14 +60,19 @@ function NavItem({
   let isActive = false;
   let isBoldOnly = false;
 
-  if (isOnPath && activeSection) {
-    if (activeSection === sectionId) {
-      if (sub) {
-        isBoldOnly = true;
-      } else {
+  if (isOnPath) {
+    if (activeSection) {
+      if (activeSection === sectionId) {
+        if (sub) {
+          isBoldOnly = true;
+        } else {
+          isActive = true;
+        }
+      } else if (childSectionIds.includes(activeSection)) {
         isActive = true;
       }
-    } else if (childSectionIds.includes(activeSection)) {
+    } else {
+      // No scrollspy active (e.g. detail pages with no sections) — activate by path alone
       isActive = true;
     }
   }
