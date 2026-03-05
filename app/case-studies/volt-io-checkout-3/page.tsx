@@ -104,8 +104,23 @@ export default function VoltCheckout3CaseStudyPage() {
               </p>
             </div>
             {/* Image placeholder — export from Figma: 2.0 flow audit annotated with failure points, or a side-by-side of a key 2.0 state vs. 3.0 equivalent (bank selection) */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
+            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center mb-6">
               <p className="text-xs text-muted-foreground">Image — 2.0 flow audit / failure point mapping</p>
+            </div>
+
+            {/* Competitor analysis */}
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-muted-foreground mb-3">Competitive Analysis</p>
+              <div className="flex flex-wrap gap-2">
+                {["TrueLayer", "Trustly", "Plaid", "Tink", "Banked.com"].map((name) => (
+                  <span
+                    key={name}
+                    className="inline-flex items-center px-3 py-1.5 rounded-md border border-border bg-muted/40 text-sm font-medium text-foreground"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
 
