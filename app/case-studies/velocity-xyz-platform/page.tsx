@@ -124,7 +124,6 @@ export default function VelocityXYZCaseStudyPage() {
             {/* TODO: export from Figma — wireframe state vs themed state */}
             <CaseStudyCompare
               aspectRatio="16/9"
-              variant="contained"
               caption="Drag to compare — wireframe state vs themed design system"
               before={{ src: '/case-studies/velocity-xyz/beneficiaries-desktop-old.png', alt: 'Wireframe state — ShadCN foundation before branding', label: 'Wireframe' }}
               after={{ src: '/case-studies/velocity-xyz/beneficiaries-desktop-new.png', alt: 'Themed state — design system with brand tokens applied', label: 'Themed' }}
