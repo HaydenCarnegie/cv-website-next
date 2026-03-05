@@ -106,11 +106,18 @@ export default function VoltCheckout3CaseStudyPage() {
             </div>
             <div className="rounded-lg overflow-hidden border border-border mb-6">
               <Image
-                src="/case-studies/volt-checkout/discovery-flow.png"
+                src="/case-studies/volt-checkout/discovery-flow-light.png"
                 alt="Volt Checkout 2.0 flow audit — failure point mapping across the payment journey"
                 width={1226}
                 height={980}
-                className="w-full h-auto"
+                className="w-full h-auto block dark:hidden"
+              />
+              <Image
+                src="/case-studies/volt-checkout/discovery-flow-dark.png"
+                alt="Volt Checkout 2.0 flow audit — failure point mapping across the payment journey"
+                width={1226}
+                height={980}
+                className="w-full h-auto hidden dark:block"
               />
             </div>
 
