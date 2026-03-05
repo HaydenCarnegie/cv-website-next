@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CaseStudyCarousel } from "@/components/case-study/case-study-carousel";
+import { CaseStudyCompare } from "@/components/case-study/case-study-compare";
 
 export const metadata: Metadata = {
   title: "Velocity.XYZ Platform — Leviathan UX · Hayden Carnegie",
@@ -120,14 +121,13 @@ export default function VelocityXYZCaseStudyPage() {
                 The product was built and partially handed off before branding was finalised. Re-theming was a token-level operation, not a redraw, because the ShadCN foundation was treated as a proper design system from day one rather than a placeholder. Additional screens were designed against new requirements as they surfaced post-theming.
               </p>
             </div>
-            {/* TODO: export from Figma — wireframe state vs themed state comparison */}
-            <CaseStudyCarousel
+            {/* TODO: export from Figma — wireframe state vs themed state */}
+            <CaseStudyCompare
               aspectRatio="16/9"
               variant="contained"
-              caption="Wireframe to themed comparison"
-              slides={[
-                { src: '/case-studies/velocity-xyz/design-direction-placeholder.png', alt: 'Wireframe state alongside the themed design system applied' },
-              ]}
+              caption="Drag to compare — wireframe state vs themed design system"
+              before={{ src: '/case-studies/velocity-xyz/beneficiaries-desktop-old.png', alt: 'Wireframe state — ShadCN foundation before branding', label: 'Wireframe' }}
+              after={{ src: '/case-studies/velocity-xyz/beneficiaries-desktop-new.png', alt: 'Themed state — design system with brand tokens applied', label: 'Themed' }}
             />
           </div>
 
@@ -142,13 +142,15 @@ export default function VelocityXYZCaseStudyPage() {
                 Travel Rule was the most demanding flow. The FATF requirement to share originator and beneficiary data on crypto transactions above a threshold varies by jurisdiction — and Velocity needed to handle both fiat and crypto rails, with an integration to third-party Travel Rule software adding an external dependency to an already complex multi-step journey. The design challenge was handling jurisdictional variance without making the flow feel bureaucratic to users who just want to move money.
               </p>
             </div>
-            {/* TODO: export from Figma — Travel Rule flow or send funds journey */}
             <CaseStudyCarousel
               aspectRatio="16/9"
               variant="contained"
-              caption="Flow design — Travel Rule compliance journey"
+              caption="Designing the Travel Rule — ownership verification, third-party wallets, and screenshot evidence flows"
               slides={[
-                { src: '/case-studies/velocity-xyz/flow-travel-rule-placeholder.png', alt: 'Travel Rule compliance flow screens' },
+                { src: '/case-studies/velocity-xyz/flow-outbound-onramp.png', alt: 'Travel Rule compliance flow — full journey across fiat and crypto rails' },
+                { src: '/case-studies/velocity-xyz/flow-screenshot-verification.png', alt: 'Screenshot verification flow — user-submitted evidence for Travel Rule compliance' },
+                { src: '/case-studies/velocity-xyz/flow-third-party-wallet-verification.png', alt: 'Third party wallet verification flow — external wallet ownership verification' },
+                { src: '/case-studies/velocity-xyz/flow-travel-rule-auth-methods.png', alt: 'Authentication methods for Travel Rule — on-chain transaction signing, screenshot, and micro-transaction verification options' },
               ]}
             />
           </div>
@@ -161,13 +163,15 @@ export default function VelocityXYZCaseStudyPage() {
                 Screens were handed off on a rolling basis rather than as a single delivery, with a standup rhythm keeping design and engineering aligned. Design QA sessions caught visual and interaction drift before it compounded, keeping the cost of corrections low throughout the build.
               </p>
             </div>
-            {/* TODO: export from Figma — final hi-fi screens */}
             <CaseStudyCarousel
               aspectRatio="16/9"
               variant="contained"
-              caption="Final screens — prototyping & handoff"
+              caption={<>Final screens — prototyping &amp; handoff · Want to see more? <a href="mailto:hayden.a.carnegie@gmail.com" className="underline underline-offset-2 hover:text-foreground transition-colors">Get in touch.</a></>}
               slides={[
-                { src: '/case-studies/velocity-xyz/final-screens-placeholder.png', alt: 'Final high-fidelity screens handed off to engineering' },
+                { src: '/case-studies/velocity-xyz/final-make-transfer.png', alt: 'Make transfer screen — final hi-fi handoff' },
+                { src: '/case-studies/velocity-xyz/final-new-beneficiary.png', alt: 'New beneficiary flow — final hi-fi handoff' },
+                { src: '/case-studies/velocity-xyz/final-add-account-skeleton.png', alt: 'Add account skeleton loading state — final hi-fi handoff' },
+                { src: '/case-studies/velocity-xyz/final-internal-transfer-journey.png', alt: 'Internal transfer journey — final hi-fi handoff' },
               ]}
             />
           </div>

@@ -194,14 +194,14 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <GroupLabel href="/case-studies">Case Studies</GroupLabel>
             {isCaseStudies && (
               <>
-                <NavItem href="/case-studies/volt-io-fuzebox" sectionId="volt-io-fuzebox" {...nav}>
-                  Volt Fuzebox
+                <NavItem href="/case-studies/velocity-xyz-platform" sectionId="velocity-xyz-platform" {...nav}>
+                  Velocity Platform
                 </NavItem>
                 <NavItem href="/case-studies/volt-io-checkout-3" sectionId="volt-io-checkout-3" {...nav}>
                   Volt Checkout
                 </NavItem>
-                <NavItem href="/case-studies/velocity-xyz-platform" sectionId="velocity-xyz-platform" {...nav}>
-                  Velocity Platform
+                <NavItem href="/case-studies/volt-io-fuzebox" sectionId="volt-io-fuzebox" {...nav}>
+                  Volt Fuzebox
                 </NavItem>
               </>
             )}

@@ -19,7 +19,7 @@ interface CaseStudyCarouselProps {
   aspectRatio?: string
   variant?: 'full' | 'contained'
   className?: string
-  caption?: string
+  caption?: React.ReactNode
 }
 
 type Direction = 'left' | 'right'
