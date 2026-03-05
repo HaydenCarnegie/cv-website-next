@@ -42,6 +42,7 @@ interface NavItemProps {
   sectionId: string;
   childSectionIds?: string[];
   activeSection: string | null;
+  scrollspyMounted: boolean;
   pathname: string;
 }
 
@@ -52,6 +53,7 @@ function NavItem({
   sectionId,
   childSectionIds = [],
   activeSection,
+  scrollspyMounted,
   pathname,
 }: NavItemProps) {
   const [path] = href.split("#");
@@ -71,10 +73,11 @@ function NavItem({
       } else if (childSectionIds.includes(activeSection)) {
         isActive = true;
       }
-    } else {
-      // No scrollspy active (e.g. detail pages with no sections) — activate by path alone
+    } else if (scrollspyMounted) {
+      // Mounted but no sections found in DOM — detail page, activate by path alone
       isActive = true;
     }
+    // If not yet mounted, show nothing to avoid flash
   }
 
   return (
@@ -110,8 +113,8 @@ function GroupLabel({ href, children }: { href: string; children: React.ReactNod
 
 export function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
-  const activeSection = useActiveSection(ALL_SECTION_IDS);
-  const nav = { activeSection, pathname };
+  const { activeId: activeSection, mounted: scrollspyMounted } = useActiveSection(ALL_SECTION_IDS);
+  const nav = { activeSection, scrollspyMounted, pathname };
 
   const isHome = pathname === "/";
   const isExperience = pathname === "/experience" || pathname.startsWith("/experience/");

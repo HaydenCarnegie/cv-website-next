@@ -6,6 +6,7 @@ const TOPBAR_HEIGHT = 56; // matches top-14 (3.5rem)
 
 export function useActiveSection(ids: string[]) {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const idsRef = useRef(ids);
   const suppressScrollRef = useRef(false);
 
@@ -76,11 +77,12 @@ export function useActiveSection(ids: string[]) {
 
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("hashchange", onHashChange);
+    setMounted(true);
     return () => {
       window.removeEventListener("scroll", update);
       window.removeEventListener("hashchange", onHashChange);
     };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return activeId;
+  return { activeId, mounted };
 }
