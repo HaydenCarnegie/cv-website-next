@@ -164,6 +164,7 @@ export default function VoltCheckout3CaseStudyPage() {
               slides={[
                 {
                   src: "/case-studies/volt-checkout/design-direction-1-light.png",
+                  darkSrc: "/case-studies/volt-checkout/design-direction-1-dark.png",
                   alt: "Volt Checkout 3.0 — default vs customised white-label theme comparison",
                 },
               ]}
