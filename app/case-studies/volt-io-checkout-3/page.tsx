@@ -160,10 +160,15 @@ export default function VoltCheckout3CaseStudyPage() {
                 The visual direction prioritised trust signals: clear hierarchy, restrained colour use, explicit affordances at every decision point. Nothing decorative that couldn&apos;t serve a functional purpose at a payment moment.
               </p>
             </div>
-            {/* Image placeholder — export from Figma: token architecture diagram or design system overview (three-layer structure), or before/after showing same checkout under two merchant themes */}
-            <div className="rounded-lg bg-muted/50 border border-border aspect-[16/9] flex items-center justify-center">
-              <p className="text-xs text-muted-foreground">Image — token architecture / white-label theme comparison</p>
-            </div>
+            <CaseStudyCarousel
+              slides={[
+                {
+                  src: "/case-studies/volt-checkout/design-direction-1-light.png",
+                  alt: "Volt Checkout 3.0 — default vs customised white-label theme comparison",
+                },
+              ]}
+              className="mt-0"
+            />
           </div>
 
           {/* Iterative Design */}
